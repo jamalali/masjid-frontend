@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy main branch to remote server
-      uses: appleboy/ssh-action@v0.1.6
-      with:
-        host: pixelblue.co.uk
-        username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd masjid
-          git pull origin main
-          git status
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: pixelblue.co.uk
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd masjid
+            git pull origin main
+            git status
