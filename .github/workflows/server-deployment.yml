@@ -14,11 +14,13 @@ jobs:
       - name: Deploy main branch to remote server
         uses: appleboy/ssh-action@v0.1.6
         with:
-          host: pixelblue.co.uk
+          host: hera.krystal.co.uk
+          port: 722
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
+          
           script: |
-            cd masjid
+            cd masjid-frontend
             git pull origin main
             git status
