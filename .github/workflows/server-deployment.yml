@@ -18,7 +18,6 @@ jobs:
           port: 722
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          passphrase: ${{ secrets.SSH_KEY_PASSPHRASE }}
           
           script: |
             cd masjid-frontend
