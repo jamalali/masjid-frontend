@@ -11,6 +11,9 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Deploy main branch to remote server
         uses: appleboy/ssh-action@v0.1.6
         with:
